@@ -100,4 +100,20 @@ Step-step Update Project :
 
 [menambahkan anotasi @JsonManagedReference di Product (Set<Supplier>) dan @JsonBackReference di Supplier (Set<Product>)], hanya saja data bisa ditampilkan lengkap dengan di Product dan data Supplier tidak ditampilkan.
 
-[menambahkan anotasi @JsonidentityInfo dengan hanya menampilkan id di masing2 data supplier/product], cara ini lebih baik.
+[menambahkan anotasi @JsonidentityInfo di class masing2 dengan hanya menampilkan id di masing2 data supplier/product], cara ini lebih baik.
+
+5. Custom Query Search JPA
+
+- Menambahkan method / function findProductByNameLike, findProductByName, findProductByCategory, findProductBySupplier di Repo Product
+
+* Anotasi : @Query, @PathParam
+
+- Menambahkan method / function findByProductName, findByProductNameLike, findByProductCategory, findByProductSupplier di Service Product
+
+* Anotasi : @Autowire untuk SupplierService untuk pencarian data Supplier findOne
+
+- Menambahkan getProductByName, getProductByNameLike, getProductByCategory, getProductBySupplier di Controller Product
+
+* Anotasi : @PostMapping, @GetMapping
+
+- Menambahkan class Search Data di DTO
