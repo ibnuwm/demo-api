@@ -72,3 +72,32 @@ Step-step Update Project :
 
 * menambahkan field dan setter getter
 * Anotasi : @Entity, @Table, @Id, @GeneratedValue, @Column, @ManyToMany
+
+4. Implementasi Relasi Data JPA join table
+
+- menambahkan dependency modelmapper
+- penambahan Controller, Service, Repo, Dto untuk class Supplier dan Category
+- Repo Product == Repo Supplier / Category
+- DTO Supplier & Category :
+
+* menambahkan field (tanpa id / entities tabel lain), setter getter, validasi
+* Anotasi : @NotEmpty, @Email
+
+- Service Product == Service Supplier / Category
+
+* Product : menambahkan method / function addSupplier untuk menambahkan entities supplier ke product
+
+- Controller :
+
+* Product : menambahkan method / function addSupplier dengan Anotasi @PostMapping("/{id}")
+* Category / Supplier : penambahan service, model mapper (untuk copy data dari DTO ke entities), parameter diganti dari entities ke DTO.
+
+- Models -> Entities :
+
+* Relasi Category - Product, hanya menambahkan field Category dengan anotasi @ManyToOne di class Product beserta setter getter.
+
+* Relasi data Supplier - Product, bisa menggunakan 2 cara supaya tidak infinite loop data yaitu :
+
+[menambahkan anotasi @JsonManagedReference di Product (Set<Supplier>) dan @JsonBackReference di Supplier (Set<Product>)], hanya saja data bisa ditampilkan lengkap dengan di Product dan data Supplier tidak ditampilkan.
+
+[menambahkan anotasi @JsonidentityInfo dengan hanya menampilkan id di masing2 data supplier/product], cara ini lebih baik.

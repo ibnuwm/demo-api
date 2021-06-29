@@ -15,8 +15,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 @Entity
 @Table(name = "tbl_product")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Product implements Serializable {
 
     @Id
@@ -39,6 +44,7 @@ public class Product implements Serializable {
 
     @ManyToMany
     @JoinTable(name = "tbl_product_supplier", joinColumns = @JoinColumn(name = "product_id"), inverseJoinColumns = @JoinColumn(name = "supplier_id"))
+    // @JsonManagedReference
     private Set<Supplier> suppliers;
 
     public Product() {
@@ -95,13 +101,14 @@ public class Product implements Serializable {
         return suppliers;
     }
 
-    public void setSupplier(Set<Supplier> supplier) {
-        this.suppliers = supplier;
+    public void setSupplier(Set<Supplier> suppliers) {
+        this.suppliers = suppliers;
     }
 
-    @Override
-    public String toString() {
-        return "Product [description=" + description + ", id=" + id + ", name=" + name + ", price=" + price + "]";
-    }
+    // @Override
+    // public String toString() {
+    // return "Product [description=" + description + ", id=" + id + ", name=" +
+    // name + ", price=" + price + "]";
+    // }
 
 }
