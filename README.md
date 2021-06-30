@@ -133,3 +133,10 @@ Step-step Update Project :
 - menambahkan method / function findByNameContains dengan return data Page di Category Repo
 - menambahkan method / function findByName, saveBatch di Category Service
 - menambahkan method / function findByName (menambahkan parameter search data, size, page), createBatch (menyimpan data dalam jumlah yg banyak) di Category Controller
+
+8. Swagger Integration for API Documentation
+
+- menambahkan dependency springfox-boot-starter dan springfox-swagger-ui
+- menambahkan file SwaggerConfig di folder swagger
+- menambahkan method / function apiInfo dan api
+- akses : localhost:8080/swagger-ui/
