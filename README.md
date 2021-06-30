@@ -123,9 +123,13 @@ Step-step Update Project :
 - source : https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference
 
 - Menambahkan method / function findByEmail, findByNameContainsOrderByIdDesc, findByNameStartingWith, findByNameContainsOrEmailContains di Supplier Repo
-
 - Menambahkan method / function findByEmail, findByNameContains, findByNameStartsWith, findByNameOrEmail di Supplier Service
-
 - Menambahkan method / function findByEmail, findByNameContains, findByNameStartsWith, findByNameOrEmail di Supplier Controller
 
 - Menambahkan field otherSearchKey di class SearchData DTO
+
+7. Paging dan Sorting Spring Data JPA (PagingAndSortingRepository)
+
+- menambahkan method / function findByNameContains dengan return data Page di Category Repo
+- menambahkan method / function findByName, saveBatch di Category Service
+- menambahkan method / function findByName (menambahkan parameter search data, size, page), createBatch (menyimpan data dalam jumlah yg banyak) di Category Controller
