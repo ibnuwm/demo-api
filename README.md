@@ -117,3 +117,15 @@ Step-step Update Project :
 * Anotasi : @PostMapping, @GetMapping
 
 - Menambahkan class Search Data di DTO
+
+6. Derived Query Method Spring Data JPA
+
+- source : https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference
+
+- Menambahkan method / function findByEmail, findByNameContainsOrderByIdDesc, findByNameStartingWith, findByNameContainsOrEmailContains di Supplier Repo
+
+- Menambahkan method / function findByEmail, findByNameContains, findByNameStartsWith, findByNameOrEmail di Supplier Service
+
+- Menambahkan method / function findByEmail, findByNameContains, findByNameStartsWith, findByNameOrEmail di Supplier Controller
+
+- Menambahkan field otherSearchKey di class SearchData DTO
