@@ -140,3 +140,16 @@ Step-step Update Project :
 - menambahkan file SwaggerConfig di folder swagger
 - menambahkan method / function apiInfo dan api
 - akses : localhost:8080/swagger-ui/
+
+* Anotasi : @Configuration
+
+9. Spring Security (Authentication)
+
+- menambahkan dependency spring-boot-starter-security
+- menambahkan AppUserController (Field : object mapper dan service, method : register)
+- menambahkan AppUserService (Field : repo dan BCryptPasswordEncoder, method : loadUserByUsername, registerAppUser)
+- menambahkan AppUserRepo (method : findByEmail)
+- menambahkan AppUserRole dan AppUser (Field, Anotasi : @Enumerated -> AppUserRole, method : getAuthorities)
+- menambahkan WebSecurityConfig (Field : service dan BCryptPasswordEncoder, method : configure dan daoAuthenticationProvider, Anotasi : @Configuration, @EnableWebSecurity, @Bean) di folder security
+- menambahkan PasswordEncoder (Anotasi : @Configuration dan @Bean, method : bCryptPasswordEncoder) di folder utils
+- menambahkan AppUserData
