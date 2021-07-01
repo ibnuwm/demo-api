@@ -53,6 +53,8 @@ public class CategoryController {
         }
 
         Category category = modelMapper.map(categoryData, Category.class);
+        // penggunaan builder
+        // Category category = Category.builder().id(1).name("whatever");
 
         responseData.setStatus(true);
         responseData.setPayload(categoryService.save(category));

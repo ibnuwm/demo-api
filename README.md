@@ -177,3 +177,11 @@ Step-step Update Project :
 - menambahkan BookController (method : findAll dan uploadFile)
 - menambahkan BookService (method : findAll dan save)
 - menambahkan CSVService (Field : Type, Method : hasCSVFormat, csvToBook)
+
+13. Project Lombok
+
+- install extension lombok
+- menambahkan dependency lombok
+- Anotasi : @Getter, @Setter, @NoArgsConstructor, @Builder, @Data
+- Fungsinya : generate sendiri setter getter / constructor / dan method2 lain.
+- contoh : class Category
