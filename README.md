@@ -153,3 +153,12 @@ Step-step Update Project :
 - menambahkan WebSecurityConfig (Field : service dan BCryptPasswordEncoder, method : configure dan daoAuthenticationProvider, Anotasi : @Configuration, @EnableWebSecurity, @Bean) di folder security
 - menambahkan PasswordEncoder (Anotasi : @Configuration dan @Bean, method : bCryptPasswordEncoder) di folder utils
 - menambahkan AppUserData
+
+10. Auditing with Spring JPA
+
+- menambahkan method / function auditorAware, anotasi @EnableJpaAuditing di DemoApiApplication
+- menambahkan field id di CategoryData
+- menambahkan class BaseEntity (method : createdBy, createdDate, updateBy, updateDate) (anotasi : @CreatedBy, @CreatedDate, @LastModifiedBy, @LastModifiedDate, @Temporal, @MappedSuperclass, @EntityListeners) di folder entities
+- menambahkan extends BaseEntity di class Category
+- menambahkan validasi method save di CategoryService
+- menambahkan class AuditorAwareImpl implement AuditorAware (method getCurrentAuditor)
