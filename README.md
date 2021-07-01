@@ -168,3 +168,12 @@ Step-step Update Project :
 - menambahkan dependency spring-boot-starter-thymeleaf
 - menambahkan file index.html dan status.html di folder resources/template
 - menambahkan UploadController (field : UPLOADED_PATH, method : index, uploadFile, uploadStatus , Anotasi : @Controller, @GetMapping, @PostMapping)
+
+12. Upload CSV Data ke MYSQL
+
+- menambahkan dependency commons-csv
+- menambahkan BookRepo extends jparepository
+- menambahkan Book
+- menambahkan BookController (method : findAll dan uploadFile)
+- menambahkan BookService (method : findAll dan save)
+- menambahkan CSVService (Field : Type, Method : hasCSVFormat, csvToBook)
