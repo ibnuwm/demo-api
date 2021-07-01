@@ -30,11 +30,12 @@ public class BookController {
     private BookService bookService;
 
     @GetMapping
-    public ResponseEntity<?> findAllBook() {
+    public ResponseEntity<?> findAllBook(
+            @RequestParam(value = "isDeleted", required = false, defaultValue = "false") boolean isDeleted) {
         ResponseData<List<Book>> responseData = new ResponseData<>();
 
         try {
-            List<Book> books = bookService.findAll();
+            List<Book> books = bookService.findAll(isDeleted);
             responseData.setStatus(true);
             responseData.setPayload(books);
             responseData.getMessages().add("get all books");

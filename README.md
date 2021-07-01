@@ -191,3 +191,9 @@ Step-step Update Project :
 - menambahkan method / function create dan remove di BookService
 - menambahakan method / function createOne dan removeOne di BookController
 - menambahkan field : deleted, Anotasi : @SQLDelete, @Where di class Book
+
+15. Soft Deleted 2 (show deleted data) with Spring JPA
+
+- menambahkan field EntityManager, menambahkan session dan filter pada method findAllBook di BookService
+- menambahkan parameter @Requestparam di method findAll pada BookController
+- comment @Where dan menambahkan @FilterDef, @Filter di Book
