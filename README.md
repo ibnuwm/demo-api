@@ -162,3 +162,9 @@ Step-step Update Project :
 - menambahkan extends BaseEntity di class Category
 - menambahkan validasi method save di CategoryService
 - menambahkan class AuditorAwareImpl implement AuditorAware (method getCurrentAuditor)
+
+11. Upload File with Spring MVC
+
+- menambahkan dependency spring-boot-starter-thymeleaf
+- menambahkan file index.html dan status.html di folder resources/template
+- menambahkan UploadController (field : UPLOADED_PATH, method : index, uploadFile, uploadStatus , Anotasi : @Controller, @GetMapping, @PostMapping)
