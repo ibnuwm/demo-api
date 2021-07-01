@@ -32,4 +32,12 @@ public class BookService {
     public List<Book> findAll() {
         return bookRepo.findAll();
     }
+
+    public Book create(Book book) {
+        return bookRepo.save(book);
+    }
+
+    public void remove(Long id) {
+        bookRepo.deleteById(id);
+    }
 }

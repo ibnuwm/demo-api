@@ -185,3 +185,9 @@ Step-step Update Project :
 - Anotasi : @Getter, @Setter, @NoArgsConstructor, @Builder, @Data
 - Fungsinya : generate sendiri setter getter / constructor / dan method2 lain.
 - contoh : class Category
+
+14. Soft Deleted with Spring JPA
+
+- menambahkan method / function create dan remove di BookService
+- menambahakan method / function createOne dan removeOne di BookController
+- menambahkan field : deleted, Anotasi : @SQLDelete, @Where di class Book
