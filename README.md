@@ -197,3 +197,10 @@ Step-step Update Project :
 - menambahkan field EntityManager, menambahkan session dan filter pada method findAllBook di BookService
 - menambahkan parameter @Requestparam di method findAll pada BookController
 - comment @Where dan menambahkan @FilterDef, @Filter di Book
+
+16. Actuator : Monitoring Springboot Application
+
+- menambahkan dependency spring-boot-starter-actuator dan spring-boot-admin-starter-client
+- menambahkan class databaseService & otherService implement healthIndicator (method : health dan isDatabaseHealthGood/isOtherServiceeHealthGood)
+- menambahkan admin url 8080 & mengganti port 9090, management, info
+- menambahkan MyController dengan dua method
