@@ -89,6 +89,7 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 			<!-- <scope>annotationProcessor</scope> -->
+			<!-- <scope>provided</scope> -->
 		</dependency>
 
 		<dependency>

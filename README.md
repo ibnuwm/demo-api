@@ -200,7 +200,22 @@ Step-step Update Project :
 
 16. Actuator : Monitoring Springboot Application
 
+- source :
+  https://github.com/codecentric/spring-boot-admin
+  https://codecentric.github.io/spring-boot-admin/2.3.1/#getting-started
 - menambahkan dependency spring-boot-starter-actuator dan spring-boot-admin-starter-client
 - menambahkan class databaseService & otherService implement healthIndicator (method : health dan isDatabaseHealthGood/isOtherServiceeHealthGood)
 - menambahkan admin url 8080 & mengganti port 9090, management, info
 - menambahkan MyController dengan dua method
+- untuk monitoring aplikasi yg berjalan juga bisa menggunakan command jconsole
+
+17. Transaction Management
+
+- Alur : Validasi norek1 => saldonya cukup => kurangi saldo norek1 => validasi norek2 => tambahkan saldo norek2
+- menambahkan scope provided dependency lombok jika terjadi error
+- menambahkan RekeningRepo (mothod / function : findByNorek)
+- menambahkan class TransferRequest di folder DTO
+- menambahkan Rekening
+- menambahkan RekeningService (method / function : create, findAll, transfer)
+- menambahkan RekeningController (method / function : create, findAll, transfer)
+- Anotasi : @Transaction di class Service
