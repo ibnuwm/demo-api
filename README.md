@@ -228,3 +228,12 @@ Step-step Update Project :
 - setting port dan DB di dev dan prod
 - run dev (masuk ke folder target): java -jar [nama_file_jar]
 - run prod (masuk ke folder target): java -jar [nama_file_jar] -Pprod => prod disesuaikan dengan activatedProperties
+
+19. Data Caching
+
+ciri2 data caching : ada limitasi, tidak terlalu sering berubah, sering banyak diakses result sama
+
+- menambahkan dependency spring-boot-starter-cache
+- menambahkan HeavyService (Anotasi : @Cacheable (untuk method yg akan di cache))
+- modifikasi MyController (method : getData, field : HeavyService)
+- menambahkan anotasi @EnableCaching di DemoApiApplication
