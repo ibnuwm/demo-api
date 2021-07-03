@@ -237,3 +237,12 @@ ciri2 data caching : ada limitasi, tidak terlalu sering berubah, sering banyak d
 - menambahkan HeavyService (Anotasi : @Cacheable (untuk method yg akan di cache))
 - modifikasi MyController (method : getData, field : HeavyService)
 - menambahkan anotasi @EnableCaching di DemoApiApplication
+
+20. Rest Template
+
+- source : https://jsonplaceholder.typicode.com/
+  https://jsonplaceholder.typicode.com/users
+- menambahkan RestAddress, RestUser, RestCompany di folder DTO
+- menambahkan RestClientService (Field : RestTemplate, Method : getUserString, getUserObject, getAll, postUserObject)
+- menambahkan RestClientController (Field : RestClientService, Method : findUserStringById, findUserObjectById, findAllUser, postUser)
+- menambahkan method : restTemplate di DemoApiApplication
