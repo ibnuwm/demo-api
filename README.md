@@ -219,3 +219,12 @@ Step-step Update Project :
 - menambahkan RekeningService (method / function : create, findAll, transfer)
 - menambahkan RekeningController (method / function : create, findAll, transfer)
 - Anotasi : @Transaction di class Service
+
+18. Konfigurasi multi environmert
+
+- menambahkan profiles di pom.xml dan set default active profile (dev)
+- menambahkan properties dev dan prod
+- mengganti dengan spring.profiles.active di application.properties
+- setting port dan DB di dev dan prod
+- run dev (masuk ke folder target): java -jar [nama_file_jar]
+- run prod (masuk ke folder target): java -jar [nama_file_jar] -Pprod => prod disesuaikan dengan activatedProperties
