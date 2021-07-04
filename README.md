@@ -213,7 +213,7 @@ Step-step Update Project :
 
 - Alur : Validasi norek1 => saldonya cukup => kurangi saldo norek1 => validasi norek2 => tambahkan saldo norek2
 - menambahkan scope provided dependency lombok jika terjadi error
-- menambahkan RekeningRepo (mothod / function : findByNorek)
+- menambahkan RekeningRepo (method / function : findByNorek)
 - menambahkan class TransferRequest di folder DTO
 - menambahkan Rekening
 - menambahkan RekeningService (method / function : create, findAll, transfer)
@@ -238,7 +238,7 @@ ciri2 data caching : ada limitasi, tidak terlalu sering berubah, sering banyak d
 - modifikasi MyController (method : getData, field : HeavyService)
 - menambahkan anotasi @EnableCaching di DemoApiApplication
 
-20. Rest Template
+20. Rest Client with Rest Template
 
 - source : https://jsonplaceholder.typicode.com/
   https://jsonplaceholder.typicode.com/users
@@ -246,3 +246,11 @@ ciri2 data caching : ada limitasi, tidak terlalu sering berubah, sering banyak d
 - menambahkan RestClientService (Field : RestTemplate, Method : getUserString, getUserObject, getAll, postUserObject)
 - menambahkan RestClientController (Field : RestClientService, Method : findUserStringById, findUserObjectById, findAllUser, postUser)
 - menambahkan method : restTemplate di DemoApiApplication
+
+21. Database Encryption
+
+- menambahkan UserDetailEncryptRepo
+- menambahakan UserDetailEncryptController
+- menambahkan StringAttributeConverter implements AttributeConverter untuk encrypt dan decrypt
+- menambahkan UserDetailEncrypt (Anotasi : @Converter dan @ColumnTransform)
+- terdapat 2 cara encrypt decrypt ke DB, yaitu pertama menggunakan Converter yang memanggil file SAC untuk proses tersebut (di handle oleh JPA) sehingga bisa digunakan oleh berbagai jenis DB, kedua menggunakan ColumnTransform yang memanfaatkan proses encrypt decrypt yg disediakan oleh DB sehingga hanya bisa digunakan oleh DB tertentu
