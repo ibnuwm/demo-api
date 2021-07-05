@@ -1,5 +1,7 @@
 package com.domain.controllers;
 
+import javax.validation.Valid;
+
 import com.domain.dto.TransferRequest;
 import com.domain.models.entities.Rekening;
 import com.domain.services.RekeningService;
@@ -19,7 +21,7 @@ public class RekeningController {
     private RekeningService rekeningService;
 
     @PostMapping
-    public Rekening create(@RequestBody Rekening rekening) {
+    public Rekening create(@Valid @RequestBody Rekening rekening) {
         return rekeningService.create(rekening);
     }
 

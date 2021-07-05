@@ -254,3 +254,10 @@ ciri2 data caching : ada limitasi, tidak terlalu sering berubah, sering banyak d
 - menambahkan StringAttributeConverter implements AttributeConverter untuk encrypt dan decrypt
 - menambahkan UserDetailEncrypt (Anotasi : @Converter dan @ColumnTransform)
 - terdapat 2 cara encrypt decrypt ke DB, yaitu pertama menggunakan Converter yang memanggil file SAC untuk proses tersebut (di handle oleh JPA) sehingga bisa digunakan oleh berbagai jenis DB, kedua menggunakan ColumnTransform yang memanfaatkan proses encrypt decrypt yg disediakan oleh DB sehingga hanya bisa digunakan oleh DB tertentu
+
+22. Custom Springboot 1
+
+- menambahkan LOGGER (logging.level di application.properties), @Value (mengambil data di application.properties) di MyController
+- menambahkan validasi di RekeningController (@Valid) dan Rekening (@Size)
+- menambahkan cara get/post data RestTemplate (exchange, httpheader, httpentity)
+- mematikan (spring.main.banner-info)/mengganti fungsi banner (banner.txt)

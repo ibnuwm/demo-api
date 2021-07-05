@@ -32,10 +32,10 @@ public @Data class Category extends BaseEntity<String> implements Serializable {
     @Column(length = 100, nullable = false, unique = true)
     private String name;
 
-    @Builder
-    public Category(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    // @Builder
+    // public Category(Long id, String name) {
+    // this.id = id;
+    // this.name = name;
+    // }
 
 }
